@@ -35,7 +35,7 @@ Then push to `main` to deploy, and open a PR to get a deploy preview.
 | `NEXT_PUBLIC_SANDBOX_MODE` | no | |
 | `APP_BASE_URL` | no | `https://<your-domain>`, used to build SolidPay callback URLs |
 | `SOLID_PAY_API_KEY` | yes | |
-| `SOLID_PAY_MERCHANT_NO` | yes | |
+| `SOLID_PAY_MERCHANT_NO` | no | Not a credential, and it matches the brand name in page titles, so the scanner would flag it |
 | `SOLID_PAY_BASE_URL` | no | The **proxy's** URL, e.g. `https://pay.pulsenow.xyz`, not soliapi.xyz |
 | `SOLID_PAY_PROXY_SECRET` | yes | Must match the proxy |
 | `SOLID_PAY_CALLBACK_IPS` | no | |

@@ -14,6 +14,9 @@
 [build.environment]
   NODE_VERSION = "22"
   NEXT_TELEMETRY_DISABLED = "1"
-  # These are public by design and end up in the client bundle; without this,
-  # Netlify's secrets scanner fails the build when it finds them in .next.
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SANDBOX_MODE"
+  # Not secrets, but they show up in the build output and repo, so Netlify's
+  # secrets scanner fails the build on them. NEXT_PUBLIC_* are in the client
+  # bundle by design. The SolidPay ones are a URL, SolidPay's published callback
+  # IP, and a merchant number that collides with the brand name in page titles —
+  # the real credentials (SOLID_PAY_API_KEY, SOLID_PAY_PROXY_SECRET) stay scanned.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SANDBOX_MODE,SOLID_PAY_BASE_URL,SOLID_PAY_CALLBACK_IPS,SOLID_PAY_MERCHANT_NO"
