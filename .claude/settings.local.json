@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@supabase/ssr/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@supabase/supabase-js/package.json'\\).version\\)\")",
+      "Bash(node -e \"const { createClient } = require\\('./node_modules/@supabase/supabase-js'\\); const c = createClient\\('http://x.x', 'key'\\); console.log\\(typeof c.auth.getClaims\\)\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const src = fs.readFileSync\\('./node_modules/@supabase/supabase-js/dist/main/lib/SupabaseAuthClient.js', 'utf8'\\); const idx = src.indexOf\\('getClaims'\\); console.log\\(src.slice\\(Math.max\\(0,idx-50\\), idx+400\\)\\)\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const files = fs.readdirSync\\('./node_modules/@supabase/supabase-js/dist/main/lib/'\\); console.log\\(files.join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const files = fs.readdirSync\\('./node_modules/@supabase/supabase-js/'\\); console.log\\(files.join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); function findFiles\\(dir\\) { const items = fs.readdirSync\\(dir\\); return items; } console.log\\(findFiles\\('./node_modules/@supabase/supabase-js/dist'\\)\\)\")"
+    ]
+  }
+}

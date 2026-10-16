@@ -1,0 +1,92 @@
+<svg width="600" height="144" viewBox="0 0 600 144" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="60%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#120a26"/><stop offset="45%" stop-color="#0b0818"/><stop offset="100%" stop-color="#070510"/>
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6b4fd6" stop-opacity="0.55"/><stop offset="50%" stop-color="#3a2b6e" stop-opacity="0.25"/><stop offset="100%" stop-color="#090714" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f29a0b" stop-opacity="0.4"/><stop offset="100%" stop-color="#f29a0b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="gemGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#7b5cff" flood-opacity="0.5"/>
+    </filter>
+    <clipPath id="frame"><rect width="600" height="144" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="600" height="144" fill="url(#bg)"/>
+    <ellipse cx="360" cy="72" rx="160" ry="110" fill="url(#purpleGlow)"/>
+    <ellipse cx="360" cy="82" rx="90" ry="60" fill="url(#amberGlow)"/>
+    <circle cx="280" cy="13" r="0.8" fill="#ffce5e" opacity="0.60"/>
+    <circle cx="274" cy="70" r="0.5" fill="#ffce5e" opacity="0.39"/>
+    <circle cx="307" cy="51" r="1.5" fill="#ffce5e" opacity="0.32"/>
+    <circle cx="366" cy="110" r="1.8" fill="#ffce5e" opacity="0.57"/>
+    <circle cx="459" cy="7" r="0.5" fill="#ffce5e" opacity="0.36"/>
+    <circle cx="291" cy="73" r="1.7" fill="#ffce5e" opacity="0.38"/>
+    <circle cx="235" cy="97" r="0.9" fill="#ffce5e" opacity="0.44"/>
+    <circle cx="382" cy="107" r="1.6" fill="#ffce5e" opacity="0.32"/>
+    <circle cx="375" cy="19" r="1.8" fill="#ffce5e" opacity="0.65"/>
+    <circle cx="223" cy="22" r="0.7" fill="#ffce5e" opacity="0.44"/>
+    <circle cx="398" cy="25" r="1.7" fill="#ffce5e" opacity="0.64"/>
+    <circle cx="272" cy="109" r="1.1" fill="#ffce5e" opacity="0.39"/>
+    <circle cx="467" cy="70" r="0.5" fill="#ffce5e" opacity="0.25"/>
+    <circle cx="238" cy="74" r="1.2" fill="#ffce5e" opacity="0.57"/>
+    <circle cx="228" cy="40" r="0.7" fill="#ffce5e" opacity="0.29"/>
+    <circle cx="337" cy="113" r="0.6" fill="#ffce5e" opacity="0.61"/>
+    <circle cx="378" cy="4" r="1.4" fill="#ffce5e" opacity="0.54"/>
+    <circle cx="199" cy="142" r="1.7" fill="#ffce5e" opacity="0.50"/>
+    <circle cx="451" cy="18" r="1.0" fill="#ffce5e" opacity="0.32"/>
+    <circle cx="414" cy="37" r="0.6" fill="#ffce5e" opacity="0.60"/>
+    <circle cx="391" cy="39" r="0.8" fill="#ffce5e" opacity="0.34"/>
+    <circle cx="293" cy="96" r="0.6" fill="#ffce5e" opacity="0.37"/>
+    <circle cx="206" cy="56" r="0.5" fill="#ffce5e" opacity="0.31"/>
+    <circle cx="461" cy="11" r="1.1" fill="#ffce5e" opacity="0.49"/>
+    <circle cx="416" cy="21" r="1.2" fill="#ffce5e" opacity="0.34"/>
+    <circle cx="366" cy="37" r="1.4" fill="#ffce5e" opacity="0.68"/>
+    <circle cx="495" cy="85" r="1.3" fill="#ffce5e" opacity="0.63"/>
+    <circle cx="283" cy="43" r="1.0" fill="#ffce5e" opacity="0.68"/>
+    <circle cx="419" cy="46" r="0.6" fill="#ffce5e" opacity="0.25"/>
+    <circle cx="474" cy="84" r="0.7" fill="#ffce5e" opacity="0.63"/>
+    <circle cx="321" cy="34" r="1.2" fill="#ffce5e" opacity="0.36"/>
+    <circle cx="277" cy="74" r="0.7" fill="#ffce5e" opacity="0.29"/>
+    <circle cx="250" cy="142" r="1.2" fill="#ffce5e" opacity="0.22"/>
+    <circle cx="478" cy="76" r="0.6" fill="#ffce5e" opacity="0.58"/>
+    <circle cx="337" cy="107" r="1.0" fill="#ffce5e" opacity="0.35"/>
+    <circle cx="436" cy="36" r="1.2" fill="#ffce5e" opacity="0.47"/>
+    <g filter="url(#gemGlow)">
+    <polygon points="330,26 390,26 360,52" fill="#ffe08f" opacity="0.95" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="330,26 360,52 344,26" fill="#fdc24a" opacity="0.9" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="390,26 360,52 376,26" fill="#e8b43c" opacity="0.85" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="330,26 344,26 302,66" fill="#b88a2e" opacity="0.8" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="390,26 376,26 418,66" fill="#8a6bd6" opacity="0.6" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="344,26 360,52 302,66" fill="#f29a0b" opacity="0.85" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="376,26 360,52 418,66" fill="#7b5cff" opacity="0.55" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="302,66 360,52 330,96" fill="#c2780a" opacity="0.85" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="418,66 360,52 390,96" fill="#5a43b8" opacity="0.6" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="360,52 330,96 360,134" fill="#945206" opacity="0.9" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="360,52 390,96 360,134" fill="#6b4fd6" opacity="0.65" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="330,96 360,134 390,96" fill="#3a2b6e" opacity="0.8" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="302,66 330,96 360,134" fill="#a85f06" opacity="0.85" stroke="#1a1030" stroke-width="0.5"/>
+    <polygon points="418,66 390,96 360,134" fill="#4a3690" opacity="0.7" stroke="#1a1030" stroke-width="0.5"/>
+    <polyline points="330,26 390,26" stroke="#fffaf0" stroke-width="2" opacity="0.85"/>
+    <polyline points="330,26 302,66 360,134" fill="none" stroke="#ffe08f" stroke-width="1.2" opacity="0.6"/>
+    <circle cx="352" cy="42" r="3" fill="#ffffff" opacity="0.9"/>
+    </g>
+    <!-- caustic sparkle points around gem -->
+    <g fill="#fffaf0">
+      <circle cx="294" cy="70" r="1.6" opacity="0.8"/>
+      <circle cx="430" cy="78" r="1.4" opacity="0.7"/>
+      <circle cx="364" cy="142" r="1.8" opacity="0.85"/>
+      <circle cx="340" cy="20" r="1.3" opacity="0.7"/>
+    </g>
+    <!-- four-point star glint on table -->
+    <path d="M352,34 L354,42 L352,50 L350,42 Z M344,42 L352,44 L360,42 L352,40 Z" fill="#ffffff" opacity="0.9"/>
+    <!-- left dark zone -->
+    <linearGradient id="leftmask" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#060410" stop-opacity="0.92"/><stop offset="55%" stop-color="#070510" stop-opacity="0.25"/><stop offset="100%" stop-color="#070510" stop-opacity="0"/>
+    </linearGradient>
+    <rect x="0" y="0" width="200" height="144" fill="url(#leftmask)"/>
+  </g>
+</svg>

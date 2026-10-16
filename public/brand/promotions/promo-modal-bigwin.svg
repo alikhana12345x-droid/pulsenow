@@ -1,0 +1,103 @@
+<svg width="600" height="144" viewBox="0 0 600 144" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06121a"/><stop offset="45%" stop-color="#090714"/><stop offset="100%" stop-color="#1a0f06"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="20%" stop-color="#fff3cf"/><stop offset="45%" stop-color="#fdc24a" stop-opacity="0.8"/><stop offset="75%" stop-color="#f29a0b" stop-opacity="0.35"/><stop offset="100%" stop-color="#f29a0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coinFace" cx="34%" cy="26%" r="82%">
+      <stop offset="0%" stop-color="#fff6dd"/><stop offset="18%" stop-color="#ffe08f"/><stop offset="46%" stop-color="#fdc24a"/><stop offset="72%" stop-color="#f29a0b"/><stop offset="100%" stop-color="#945206"/>
+    </radialGradient>
+    <linearGradient id="coinEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4870c"/><stop offset="100%" stop-color="#5c3604"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.6"/></filter>
+    <filter id="mblur"><feGaussianBlur stdDeviation="1.7"/></filter>
+    <clipPath id="frame"><rect width="600" height="144" rx="12"/></clipPath>
+    <g id="bcoin">
+      <ellipse cx="0" cy="4" rx="26" ry="23" fill="url(#coinEdge)"/>
+      <ellipse cx="0" cy="0" rx="26" ry="23" fill="url(#coinFace)"/>
+      <ellipse cx="0" cy="0" rx="19" ry="16.5" fill="none" stroke="#b9740c" stroke-width="1.3" opacity="0.55"/>
+      <path d="M0,-8 L2.1,-2.1 L8,0 L2.1,2.1 L0,8 L-2.1,2.1 L-8,0 L-2.1,-2.1 Z" fill="#b9740c" opacity="0.5"/>
+      <ellipse cx="-8" cy="-9" rx="6" ry="4" fill="#fffaf0" opacity="0.8" filter="url(#soft)"/>
+      <circle cx="-11" cy="-11" r="1.8" fill="#fff"/>
+    </g>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="600" height="144" fill="url(#bg)"/>
+    <!-- amber dust upper right -->
+    <circle cx="491" cy="5" r="1.4" fill="#ffce5e" opacity="0.32"/>
+    <circle cx="555" cy="0" r="1.1" fill="#ffce5e" opacity="0.37"/>
+    <circle cx="592" cy="36" r="1.4" fill="#ffce5e" opacity="0.45"/>
+    <circle cx="410" cy="2" r="1.4" fill="#ffce5e" opacity="0.56"/>
+    <circle cx="529" cy="18" r="1.7" fill="#ffce5e" opacity="0.53"/>
+    <circle cx="400" cy="41" r="1.2" fill="#ffce5e" opacity="0.26"/>
+    <circle cx="408" cy="14" r="1.2" fill="#ffce5e" opacity="0.17"/>
+    <circle cx="437" cy="6" r="1.8" fill="#ffce5e" opacity="0.42"/>
+    <circle cx="331" cy="54" r="0.9" fill="#ffce5e" opacity="0.37"/>
+    <circle cx="480" cy="23" r="1.1" fill="#ffce5e" opacity="0.35"/>
+    <circle cx="367" cy="60" r="0.8" fill="#ffce5e" opacity="0.52"/>
+    <circle cx="389" cy="21" r="1.2" fill="#ffce5e" opacity="0.17"/>
+    <circle cx="365" cy="25" r="1.3" fill="#ffce5e" opacity="0.54"/>
+    <circle cx="597" cy="3" r="1.5" fill="#ffce5e" opacity="0.21"/>
+    <circle cx="547" cy="23" r="2.0" fill="#ffce5e" opacity="0.40"/>
+    <circle cx="364" cy="0" r="1.0" fill="#ffce5e" opacity="0.54"/>
+    <circle cx="370" cy="34" r="1.2" fill="#ffce5e" opacity="0.31"/>
+    <circle cx="546" cy="15" r="1.7" fill="#ffce5e" opacity="0.45"/>
+    <circle cx="583" cy="36" r="2.1" fill="#ffce5e" opacity="0.35"/>
+    <circle cx="485" cy="43" r="1.9" fill="#ffce5e" opacity="0.55"/>
+    <circle cx="361" cy="10" r="1.5" fill="#ffce5e" opacity="0.52"/>
+    <circle cx="474" cy="21" r="2.1" fill="#ffce5e" opacity="0.28"/>
+    <circle cx="353" cy="4" r="0.6" fill="#ffce5e" opacity="0.48"/>
+    <circle cx="359" cy="50" r="2.0" fill="#ffce5e" opacity="0.60"/>
+    <circle cx="548" cy="30" r="1.6" fill="#ffce5e" opacity="0.52"/>
+    <circle cx="523" cy="20" r="1.8" fill="#ffce5e" opacity="0.20"/>
+    <circle cx="413" cy="70" r="1.4" fill="#ffce5e" opacity="0.27"/>
+    <circle cx="542" cy="32" r="0.6" fill="#ffce5e" opacity="0.16"/>
+    <circle cx="400" cy="23" r="2.1" fill="#ffce5e" opacity="0.26"/>
+    <circle cx="560" cy="60" r="1.3" fill="#ffce5e" opacity="0.60"/>
+    <circle cx="536" cy="34" r="1.0" fill="#ffce5e" opacity="0.36"/>
+    <circle cx="574" cy="38" r="0.9" fill="#ffce5e" opacity="0.32"/>
+    <circle cx="459" cy="13" r="1.5" fill="#ffce5e" opacity="0.17"/>
+    <circle cx="552" cy="13" r="0.8" fill="#ffce5e" opacity="0.41"/>
+    <circle cx="413" cy="62" r="1.4" fill="#ffce5e" opacity="0.38"/>
+    <circle cx="555" cy="15" r="1.8" fill="#ffce5e" opacity="0.44"/>
+    <circle cx="446" cy="67" r="0.6" fill="#ffce5e" opacity="0.54"/>
+    <circle cx="369" cy="59" r="0.8" fill="#ffce5e" opacity="0.17"/>
+    <circle cx="465" cy="65" r="1.0" fill="#ffce5e" opacity="0.37"/>
+    <circle cx="494" cy="17" r="1.4" fill="#ffce5e" opacity="0.15"/>
+    <!-- central burst light -->
+    <ellipse cx="430" cy="64" rx="150" ry="120" fill="url(#burst)"/>
+    <!-- radiating light rays -->
+    <g opacity="0.35">
+      <line x1="430" y1="64" x2="630" y2="64" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="603" y2="124" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="530" y2="168" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="430" y2="184" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="330" y2="168" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="257" y2="124" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="230" y2="64" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="257" y2="4" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="330" y2="-40" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="430" y2="-56" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="530" y2="-40" stroke="#ffe08f" stroke-width="1" opacity="0.4"/><line x1="430" y1="64" x2="603" y2="4" stroke="#ffe08f" stroke-width="1" opacity="0.4"/>
+    </g>
+    <!-- tumbling coins -->
+    <g transform="translate(549,147) rotate(-16) scale(0.36,0.58)" opacity="0.65" filter="url(#mblur)"><use href="#bcoin"/></g>
+    <g transform="translate(293,26) rotate(-6) scale(0.37,0.67)" opacity="0.81" filter="url(#mblur)"><use href="#bcoin"/></g>
+    <g transform="translate(508,144) rotate(31) scale(0.85,0.97)" opacity="0.69" filter="url(#mblur)"><use href="#bcoin"/></g>
+    <g transform="translate(319,7) rotate(-1) scale(0.27,0.53)" opacity="0.78" filter="url(#mblur)"><use href="#bcoin"/></g>
+    <g transform="translate(564,38) rotate(35) scale(0.33,0.88)" opacity="0.63" filter="url(#mblur)"><use href="#bcoin"/></g>
+    <g transform="translate(541,71) rotate(30) scale(0.47,0.54)" opacity="1.00"><use href="#bcoin"/></g>
+    <g transform="translate(459,-3) rotate(-1) scale(0.81,0.96)" opacity="1.00"><use href="#bcoin"/></g>
+    <g transform="translate(469,124) rotate(-22) scale(0.45,0.54)" opacity="1.00"><use href="#bcoin"/></g>
+    <g transform="translate(438,124) rotate(-34) scale(0.52,0.67)" opacity="1.00"><use href="#bcoin"/></g>
+    <g transform="translate(429,14) rotate(-5) scale(0.40,0.86)" opacity="1.00"><use href="#bcoin"/></g>
+    <!-- teal speed streaks lower third -->
+    <rect x="121" y="102" width="359" height="1.6" fill="#5eead4" opacity="0.20" filter="url(#soft)"/>
+    <rect x="116" y="105" width="330" height="1.6" fill="#5eead4" opacity="0.24" filter="url(#soft)"/>
+    <rect x="68" y="111" width="265" height="1.6" fill="#5eead4" opacity="0.19" filter="url(#soft)"/>
+    <rect x="22" y="116" width="250" height="1.6" fill="#5eead4" opacity="0.17" filter="url(#soft)"/>
+    <rect x="111" y="121" width="320" height="1.6" fill="#5eead4" opacity="0.16" filter="url(#soft)"/>
+    <rect x="69" y="125" width="220" height="1.6" fill="#5eead4" opacity="0.15" filter="url(#soft)"/>
+    <rect x="24" y="132" width="266" height="1.6" fill="#5eead4" opacity="0.22" filter="url(#soft)"/>
+    <!-- core flash -->
+    <circle cx="430" cy="64" r="7" fill="#ffffff" opacity="0.9" filter="url(#soft)"/>
+    <!-- left dark zone -->
+    <linearGradient id="leftmask" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050309" stop-opacity="0.95"/><stop offset="55%" stop-color="#070510" stop-opacity="0.3"/><stop offset="100%" stop-color="#070510" stop-opacity="0"/>
+    </linearGradient>
+    <rect x="0" y="0" width="215" height="144" fill="url(#leftmask)"/>
+  </g>
+</svg>

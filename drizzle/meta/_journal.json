@@ -1,0 +1,76 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1776544527854,
+      "tag": "0000_overjoyed_arachne",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1778363708235,
+      "tag": "0001_charming_sue_storm",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1778544000000,
+      "tag": "0002_finance_pagination_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1779228028594,
+      "tag": "0003_whole_human_fly",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1779500000000,
+      "tag": "0004_bet_amount_tiers",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1749600000000,
+      "tag": "0005_game_rounds_win_prob_snapshot",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1782591586989,
+      "tag": "0006_goofy_roulette",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1783000000000,
+      "tag": "0007_platform_settings",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1783900000000,
+      "tag": "0008_game_rounds_effective_snapshot",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1788386921415,
+      "tag": "0009_happy_wilson_fisk",
+      "breakpoints": true
+    }
+  ]
+}

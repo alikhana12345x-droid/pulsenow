@@ -1,0 +1,24 @@
+# Caddy obtains and renews the TLS certificate automatically — nothing to run,
+# nothing to remember. Requires DNS for the domain to already point here.
+
+{{DOMAIN}}, www.{{DOMAIN}} {
+	encode zstd gzip
+
+	# Next.js emits content-hashed asset filenames, so they can be cached hard.
+	@immutable path /_next/static/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+
+	reverse_proxy 127.0.0.1:3000 {
+		# Deposits can sit on the payment provider for a while before replying.
+		transport http {
+			read_timeout 120s
+		}
+	}
+
+	log {
+		output file /var/log/caddy/pulsenow.log {
+			roll_size 20mb
+			roll_keep 5
+		}
+	}
+}

@@ -1,0 +1,85 @@
+Platform Assets — Complete List + Design Contexts for Opus 4.8
+Your brand DNA (pass this to Opus as context for every prompt):
+
+
+Dark luxury crypto casino. Pakistan/South Asia market.
+Colors: deep navy-purple bg (#090714), amber/gold accent (#f29a0b), 
+        teal win (#5eead4), near-white text (#f4f1ff)
+Vibe: premium, neon-luxury, mobile-first, slightly futuristic
+Style reference: Stake.com + Rollbit visual language
+Asset 1 — Main Logo (public/brand/logo.png)
+Used: Sticky header (≈150px wide, 48px tall), side drawer header
+Format needed: PNG with transparent background, also SVG ideally
+Design context for Opus:
+
+
+Horizontal wordmark logo for a premium crypto casino called "[NAME]".
+The name should be in a bold, modern sans-serif or slightly stylized 
+custom typeface. The letter(s) "P" or first letter should have a subtle 
+amber/gold (#f29a0b) highlight or the dot/accent of a letter replaced 
+with a small EKG pulse-line or waveform element. Rest of text is 
+pure white (#f4f1ff). NO gradients on text itself. NO glow effects. 
+Clean, flat, scalable. Works on very dark (#090714) backgrounds only.
+Think: Stake.com logo level of restraint and premium feel.
+Asset 2 — Icon Mark (public/brand/logo-icon.png)
+Used: PWA icons, compact spaces, app launcher
+Format needed: Square PNG (at least 512×512), transparent background
+Design context for Opus:
+
+
+Square logomark icon (no text) for a premium crypto casino called "[NAME]".
+Abstract symbol — either a stylized letter "P" with a pulse/heartbeat 
+line cutting through it, OR a minimal geometric shape (diamond, hexagon, 
+or abstract waveform) that reads clearly at 16px AND 512px.
+Color: amber/gold (#f29a0b) mark on transparent (for layering) OR 
+white mark on transparent. Must work as a PWA icon on dark bg.
+No gradients. No shadows. No complexity — top-tier logomarks are always simple.
+Think: the Stake "S" or Rollbit "R" — one shape, instantly recognizable.
+Asset 3 — App Icon (all favicon + PWA sizes)
+Files: favicon-16x16.png, favicon-32x32.png, favicon.ico, apple-touch-icon.png (180×180), android-chrome-192x192.png, android-chrome-512x512.png
+All derived from Asset 2, but with background for the touch/PWA icons
+Design context for Opus:
+
+
+App icon for a premium crypto casino PWA. 
+Background: deep navy-purple (#090714) with an extremely subtle 
+radial glow of amber in the center (not visible at small sizes, 
+only adds depth at 512px). 
+Icon mark: the logomark from Asset 2 centered, amber/gold (#f29a0b), 
+occupying ~60% of the canvas. Rounded square shape (like iOS app icon).
+At 16px and 32px: just the lettermark, white or amber, no background needed.
+At 180px+: full background + centered mark.
+NO text. NO complex details. Looks like a real casino app on someone's 
+home screen next to WhatsApp and Instagram.
+Asset 4 — OG / Social Preview Image (MISSING — create this)
+Save to: public/brand/og-image.png
+Used: WhatsApp/Telegram link preview when someone shares your URL, Google search result thumbnail
+This is the most important missing asset — every share is a free ad
+Format needed: 1200×630px PNG
+Design context for Opus:
+
+
+Social media open graph image (1200×630px) for a premium crypto casino.
+Layout: Dark background (#090714) with deep radial purple glow on left.
+Left side: Platform logo (horizontal wordmark) + tagline below it 
+  (e.g. "Provably Fair · Instant Withdrawals · 1% House Edge")
+Right side: Subtle composition of 2-3 floating game elements — a glowing 
+  amber coin, a stylized dice face, a card — slightly blurred/soft depth.
+Color scheme: amber gold highlights, deep purple/navy base, teal accent glow.
+Mood: premium, trustworthy, high-energy but not garish. 
+NOT slot machine aesthetic. Think fintech meets casino.
+Bottom right: small "betpulse.com" or "[domain]" in muted text.
+Resolution: 1200×630. No rounded corners (browser adds its own).
+Summary Table
+Asset	File	Status	Priority
+Horizontal logo	public/brand/logo.png	Replace	Critical
+Icon mark	public/brand/logo-icon.png	Replace	Critical
+Favicon 16/32	fav-icons/favicon-*.png + .ico	Derive from icon mark	High
+Apple touch icon	fav-icons/apple-touch-icon.png	Derive from icon mark	High
+Android 192/512	fav-icons/android-chrome-*.png	Derive from icon mark	High
+OG image	public/brand/og-image.png	Create new	High
+The planes SVGs (public/planes/) are SkyRise game assets — not platform branding, leave those.
+
+Once you have the new assets, come back and I'll wire the OG image into the Next.js metadata and update the manifest.
+
+Pulse

@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- pulse path reused -->
+    <path id="pulse" d="M150 256 h44 l20 -52 l30 116 l24 -76 l18 12 h74"/>
+  </defs>
+  <!-- amber P with counter punched (evenodd) and pulse channel punched via mask -->
+  <mask id="channel" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+    <rect width="512" height="512" fill="white"/>
+    <use href="#pulse" stroke="black" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </mask>
+  <g mask="url(#channel)">
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#f29a0b" d="
+      M166 100 h112 a98 98 0 0 1 0 196 h-66 v116
+      a16 16 0 0 1 -16 16 h-30 a16 16 0 0 1 -16 -16 V116
+      a16 16 0 0 1 16 -16 Z
+      M212 150 v96 h62 a48 48 0 0 0 0 -96 Z"/>
+  </g>
+  <!-- bright spike inside the transparent channel -->
+  <use href="#pulse" stroke="#f4f1ff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

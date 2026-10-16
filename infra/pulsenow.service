@@ -1,0 +1,32 @@
+[Unit]
+Description=PulseNow (Next.js)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pulsenow
+WorkingDirectory=/srv/pulsenow
+
+# Secrets and config live outside the checkout so a deploy never touches them.
+EnvironmentFile=/etc/pulsenow/env
+
+ExecStart=/usr/local/bin/node /srv/pulsenow/node_modules/next/dist/bin/next start --port 3000
+
+# Always come back: a crash, an OOM kill or a reboot must not leave the casino
+# down, and SolidPay callbacks arrive at any hour.
+Restart=always
+RestartSec=3
+
+# Hardening — the app needs nothing outside its own directory.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pulsenow
+
+[Install]
+WantedBy=multi-user.target

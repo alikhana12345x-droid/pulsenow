@@ -1,0 +1,39 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1c1430" stop-opacity="0.9"/><stop offset="100%" stop-color="#0d0b1e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="55%" stop-color="#f29a0b" stop-opacity="0"/><stop offset="78%" stop-color="#f29a0b" stop-opacity="0.55"/><stop offset="100%" stop-color="#f29a0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coinFace" cx="36%" cy="28%" r="82%">
+      <stop offset="0%" stop-color="#fff6dd"/><stop offset="18%" stop-color="#ffe08f"/>
+      <stop offset="46%" stop-color="#fdc24a"/><stop offset="74%" stop-color="#f29a0b"/><stop offset="100%" stop-color="#945206"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <clipPath id="sq"><rect width="200" height="200" rx="40"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="200" height="200" fill="#0d0b1e"/>
+    <rect width="200" height="200" fill="url(#bgGlow)"/>
+    <circle cx="100" cy="100" r="74" fill="url(#halo)"/>
+    <!-- coin body -->
+    <circle cx="100" cy="100" r="58" fill="#945206"/>
+    <circle cx="100" cy="100" r="58" fill="url(#coinFace)"/>
+    <circle cx="100" cy="100" r="58" fill="none" stroke="#5c3604" stroke-width="2"/>
+    <circle cx="100" cy="100" r="46" fill="none" stroke="#b9740c" stroke-width="2.4" opacity="0.6"/>
+    <!-- embossed refresh arrow (circular, darker gold) -->
+    <g fill="none" stroke="#a85f06" stroke-width="9" stroke-linecap="round" opacity="0.9">
+      <path d="M100,66 A34,34 0 1,1 66,100"/>
+    </g>
+    <!-- arrowhead -->
+    <path d="M100,52 L100,80 L114,66 Z" fill="#a85f06" opacity="0.9"/>
+    <!-- inner emboss highlight on arrow -->
+    <g fill="none" stroke="#ffcf6e" stroke-width="2.5" stroke-linecap="round" opacity="0.5">
+      <path d="M100,69 A31,31 0 1,1 69,100"/>
+    </g>
+    <!-- specular highlight top-left -->
+    <ellipse cx="78" cy="74" rx="20" ry="13" fill="#fffaf0" opacity="0.7" filter="url(#soft)"/>
+    <circle cx="72" cy="68" r="5" fill="#ffffff" opacity="0.95"/>
+  </g>
+</svg>
