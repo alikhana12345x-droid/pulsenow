@@ -1,5 +1,5 @@
 import {
-  pgTable, uuid, text, numeric, jsonb, timestamp, index, uniqueIndex,
+  pgTable, uuid, text, numeric, jsonb, timestamp, index,
 } from "drizzle-orm/pg-core";
 
 import { profiles } from "./profile";
@@ -15,7 +15,6 @@ export const referrals = pgTable("referrals", {
   created_at:      timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 }, (t) => [
   index("referrals_referrer_id_idx").on(t.referrer_id),
-  uniqueIndex("referrals_referred_id_unique").on(t.referred_id),
 ]);
 
 export const referral_earnings = pgTable("referral_earnings", {

@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Standalone output is only wanted when deploying by uploading a build
   // (cPanel/Passenger, a bare VPS). Platforms that build from the repo —
-  // Render, Vercel — run `next start` against a normal build, so this stays
+  // Render, Vercel, Netlify — run `next start` against a normal build, so this stays
   // off unless BUILD_STANDALONE is set. `npm run deploy:build` sets it.
   output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
   images: {

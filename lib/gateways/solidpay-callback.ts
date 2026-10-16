@@ -16,6 +16,10 @@ export type NotificationRead =
   | { ok: false; status: number; reason: string; raw: string };
 
 function clientIp(req: NextRequest): string | null {
+  // Netlify sets this from the TCP connection itself; unlike X-Forwarded-For,
+  // the caller can't prepend a value to it.
+  const netlify = req.headers.get("x-nf-client-connection-ip");
+  if (netlify) return netlify.trim();
   const forwarded = req.headers.get("x-forwarded-for");
   if (forwarded) return forwarded.split(",")[0]!.trim();
   return req.headers.get("x-real-ip")?.trim() || null;
