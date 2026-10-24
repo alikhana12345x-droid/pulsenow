@@ -1,9 +1,10 @@
 import { getTiers } from "@/lib/actions/game-settings";
-import { getPaymentMode, getSupportContacts } from "@/lib/actions/platform-settings";
+import { getPaymentMode, getMaintenanceMode, getSupportContacts } from "@/lib/actions/platform-settings";
 import { getSolidPayAccount } from "@/lib/actions/payment-accounts";
 import { isSolidPayConfigured } from "@/lib/gateways/solidpay";
 import { TiersTable } from "./tiers-table";
 import { PaymentModeToggle } from "./payment-mode-toggle";
+import { MaintenanceModeToggle } from "./maintenance-mode-toggle";
 import { ResetDataCard } from "./reset-data-card";
 import { SupportContactsCard } from "./support-contacts-card";
 import { DiscordNotificationsCard } from "./discord-notifications-card";
@@ -39,9 +40,10 @@ export async function SettingsContent({ viewerRole }: { viewerRole: string }) {
     );
   }
 
-  const [tiers, paymentMode, supportContacts, discordSettings] = await Promise.all([
+  const [tiers, paymentMode, maintenanceMode, supportContacts, discordSettings] = await Promise.all([
     getTiers(),
     getPaymentMode(),
+    getMaintenanceMode(),
     getSupportContacts(),
     getDiscordSettings(),
   ]);
@@ -55,6 +57,8 @@ export async function SettingsContent({ viewerRole }: { viewerRole: string }) {
           Platform payment mode, notifications, support contacts and per-round win probability tiers.
         </p>
       </div>
+
+      <MaintenanceModeToggle initialEnabled={maintenanceMode} />
 
       <PaymentModeToggle initialMode={paymentMode} />
 

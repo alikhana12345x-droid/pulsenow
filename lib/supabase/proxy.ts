@@ -1,6 +1,10 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { eq } from "drizzle-orm";
 import { hasEnvVars } from "../utils";
+import { db } from "@/lib/db";
+import { profiles } from "@/lib/supabase/schema";
+import { isMaintenanceModeEnabled } from "@/lib/settings/maintenance";
 
 const AUTH_ENTRY_PATHS = new Set([
   "/",
@@ -101,6 +105,32 @@ export async function updateSession(request: NextRequest) {
   // Skip role checks for API routes and auth routes — they handle their own auth.
   const isApiRoute  = pathname.startsWith("/api/");
   const isAuthRoute = pathname.startsWith("/auth/");
+
+  // ── Maintenance mode ─────────────────────────────────────────────────────
+  // A superadmin flips this from /admin/settings to pause the whole app — the
+  // lobby, the games, the admin panel itself — for everyone else, including
+  // signed-out visitors. /auth/* and /api/* stay open so a superadmin can
+  // still sign in and webhooks keep flowing.
+  if (!isApiRoute && !isAuthRoute && (await isMaintenanceModeEnabled())) {
+    let isSuperadmin = false;
+    if (user?.sub) {
+      const [profile] = await db
+        .select({ role: profiles.role })
+        .from(profiles)
+        .where(eq(profiles.id, user.sub as string))
+        .limit(1);
+      isSuperadmin = profile?.role === "superadmin";
+    }
+
+    if (!isSuperadmin) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/maintenance";
+      url.search   = "";
+      return setPendingCookies(
+        NextResponse.rewrite(url, { request: { headers: requestHeaders } }),
+      );
+    }
+  }
 
   // ── Unauthenticated ───────────────────────────────────────────────────────
   if (!user) {

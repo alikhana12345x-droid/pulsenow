@@ -3,6 +3,7 @@ import { eq, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { deposits, withdrawals, profiles, payment_accounts } from "@/lib/supabase/schema";
 import { getSetting } from "@/lib/actions/platform-settings";
+import { isMaintenanceModeEnabled } from "@/lib/settings/maintenance";
 import {
   DISCORD_EVENTS,
   DISCORD_SETTINGS_KEY,
@@ -291,6 +292,10 @@ function notify(
 ) {
   inBackground(async () => {
     try {
+      // The app is paused — a gateway callback can still land while maintenance
+      // mode is on (/api/* stays open), but nothing should post to Discord
+      // until a superadmin turns the lights back on.
+      if (await isMaintenanceModeEnabled()) return;
       const settings = await loadSettings();
       if (!settings.enabled || !settings.events[event]) return;
       const url = webhookFor(settings, kind);

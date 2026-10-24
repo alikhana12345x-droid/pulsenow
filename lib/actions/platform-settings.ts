@@ -4,7 +4,8 @@ import { db } from "@/lib/db";
 import { platform_settings, admin_audit_log } from "@/lib/supabase/schema";
 import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
-import { verifyCapability } from "@/lib/auth/permissions";
+import { verifyCapability, verifySuperadmin } from "@/lib/auth/permissions";
+import { MAINTENANCE_MODE_KEY, isMaintenanceModeEnabled } from "@/lib/settings/maintenance";
 import {
   SUPPORT_CONTACTS_KEY,
   EMPTY_SUPPORT_CONTACTS,
@@ -66,6 +67,30 @@ export async function setPaymentMode(mode: PaymentMode) {
 
   revalidatePath("/admin/settings");
   revalidatePath("/protected", "layout");
+}
+
+/** Whether the whole app is paused for everyone but superadmins. Not admin-gated (the proxy reads it on every request). */
+export async function getMaintenanceMode(): Promise<boolean> {
+  return isMaintenanceModeEnabled();
+}
+
+/** Superadmin-only: the proxy enforces this everywhere, so an admin locked out by it could never undo it. */
+export async function setMaintenanceMode(enabled: boolean) {
+  const admin = await verifySuperadmin();
+  const next = Boolean(enabled);
+
+  await setSetting(MAINTENANCE_MODE_KEY, next);
+
+  await db.insert(admin_audit_log).values({
+    admin_id:    admin.id,
+    action:      next ? "enable_maintenance_mode" : "disable_maintenance_mode",
+    target_type: "platform_setting",
+    target_id:   admin.id,
+    details:     { key: MAINTENANCE_MODE_KEY, value: next },
+  });
+
+  // The whole app reads this, so invalidate everything, not just one route.
+  revalidatePath("/", "layout");
 }
 
 /** Support channels shown to players. All blank until an admin fills them in. Not admin-gated. */
